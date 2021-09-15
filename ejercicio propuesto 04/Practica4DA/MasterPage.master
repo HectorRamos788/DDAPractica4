@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Practica4DA.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 23px;
+        }
+        .nuevoEstilo2 {
+            vertical-align: top;
+            background-color: #C0C0C0;
+            width: 200px;
+            height: 300px;
+        }
+        
+        
+        .nuevoEstilo3 {
+            vertical-align: top;
+            background-color: #999999;
+            width: 45px;
+            height: 45px;
+            border-bottom-style: solid;
+            border-bottom-width: thick;
+            border-bottom-color: #336600;
+        }
+        
+        
+        .auto-style3 {
+            height: 21px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" >
+        <div>
+           <table class="auto-style1">
+                <tr class="nuevoEstilo3">
+                    <td colspan="2" class="auto-style3"> <asp:Image ID="Image" runat="server" ImageUrl="~/Imagenes/dd.jpg" Height="29px" Width="124px" /> Menú Tabla</td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1"></asp:TreeView>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                        </td>
+                </tr>
+                <tr>
+                    <td class="nuevoEstilo2"><span class="nuevoEstilo1">&nbsp;DETALLES</span></td>
+                    <td class="auto-style2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            <p>
+                                DEMOSTRACIÓN DE PÁGINAS MAESTRAS</p>
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">Copyright © 2020 The Soft Inc.</td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
