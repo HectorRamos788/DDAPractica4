@@ -1,0 +1,97 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="MasterPage.master.cs" Inherits="Practica4DA.MasterPage" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            height: 23px;
+        }
+        .nuevoEstilo2 {
+            vertical-align: top;
+            background-color: #C0C0C0;
+            width: 200px;
+            height: 300px;
+        }
+        
+        
+        .nuevoEstilo3 {
+            vertical-align: top;
+            background-color: #999999;
+            width: 45px;
+            height: 45px;
+            border-bottom-style: solid;
+            border-bottom-width: thick;
+            border-bottom-color: #336600;
+        }
+        
+        
+        .auto-style3 {
+            height: 21px;
+        }
+        .card-body {
+            width: 161px;
+        }
+        .card-img-top {
+            height: 167px;
+            width: 162px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server" >
+        <div>
+            <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <button type="button" class="btn btn-danger">Registrase</button>
+  <button type="button" class="btn btn-warning"> Iniciar Sesion</button>
+  <button type="button" class="btn btn-success">Agregar Tarjeta</button>
+</div>
+           <table class="auto-style1">
+                <tr class="nuevoEstilo3">
+                    <td colspan="2" class="auto-style3"> <asp:Image ID="Image" runat="server" ImageUrl="~/Imagenes/dd.jpg" Height="29px" Width="124px" /> Menú Tabla</td>
+                </tr>
+                <tr>
+                    <td colspan="2" style="margin-left: 40px">
+                        <asp:TreeView ID="TreeView1" runat="server" DataSourceID="SiteMapDataSource1"></asp:TreeView>
+                        <asp:SiteMapDataSource ID="SiteMapDataSource1" runat="server" />
+                        </td>
+
+                </tr>
+                <tr>
+                    <td class="nuevoEstilo2"><span class="nuevoEstilo1">&nbsp;DETALLES</span></td>
+                    <td class="auto-style2">
+                        <asp:ContentPlaceHolder ID="ContentPlaceHolder2" runat="server">
+                            <p>
+                                DEMOSTRACIÓN DE PÁGINAS MAESTRAS</p>
+                        </asp:ContentPlaceHolder>
+                    </td>
+                </tr>
+                <tr>
+
+                    <td colspan="2">Copyright © 2020 The Soft Inc.</td>
+                </tr>
+
+            </table>
+        </div>
+    </form>
+     <br> </br>
+    <button type="button" class="btn btn-lg btn-danger" data-bs-toggle="popover" title="Popover title" data-bs-content="And here's some amazing content. It's very engaging. Right?">Agregar al carrito</button>
+   <br> </br>
+    <div class="card" style="width: 18rem;">
+
+  <img src="cinqueterre.jpg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">EMPLEADO DEL MES</h5>
+    <p class="card-text">Light se caracteriza como un chico aburrido,valeroso e inteligente. Tiene 17 años al inicio del anime y del manga, a pesar de ser joven, confiando en su propio sentido de la lógica y creatividad como es en lo que respecta a los demás.</p>
+&nbsp;</div>
+</div>
+</body>
+</html>
